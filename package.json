@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/strapi": "4.5.4",
+    "@strapi/plugin-users-permissions": "4.5.4",
+    "@strapi/plugin-i18n": "4.5.4",
+    "@strapi/provider-upload-cloudinary": "^4.5.4",
+    "pg": "8.6.0"
+  },
+  "author": {
+    "name": "Sahil Kavitake"
+  },
+  "strapi": {
+    "uuid": "654d598d-2f3d-4662-971b-15c3cb8e1b93"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

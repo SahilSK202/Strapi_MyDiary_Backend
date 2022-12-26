@@ -1,19 +1,19 @@
 "use strict";
 
 /**
- * note controller
+ * day controller
  */
 
 const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController("api::note.note", ({ strapi }) => ({
+module.exports = createCoreController("api::day.day", ({ strapi }) => ({
   // Method 3: Replacing a core action
   async findOne(ctx) {
     const { id } = ctx.params;
 
     const entity = await strapi.db
-      .query("api::note.note")
-      .findMany({ where: { date: id }, populate: true });
+      .query("api::day.day")
+      .findOne({ where: { date: id }, populate: true });
     const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
 
     return this.transformResponse(sanitizedEntity);
